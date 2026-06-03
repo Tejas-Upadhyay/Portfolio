@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tejas Upadhyay | Developer & Cybersecurity Enthusiast</title>
+  <meta name="description" content="Portfolio of Tejas Upadhyay — developer, cybersecurity enthusiast, AFA CyberCamp volunteer, and creator." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Scanlines overlay -->
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- Particle canvas -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">
+        <span class="prompt">~/</span><span class="nav-name">tejasu</span><span class="blink-cursor">_</span>
+      </span>
+      <ul class="nav-links" role="navigation" aria-label="Main navigation">
+        <li><a href="#about" id="nav-about">about</a></li>
+        <li><a href="#skills" id="nav-skills">skills</a></li>
+        <li><a href="#experience" id="nav-experience">experience</a></li>
+        <li><a href="#projects" id="nav-projects">projects</a></li>
+        <li><a href="#contact" id="nav-contact">contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu" id="menuToggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" aria-label="Introduction">
+    <div class="hero-terminal">
+      <div class="terminal-bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="terminal-title">bash — tejasu@portfolio</span>
+      </div>
+      <div class="terminal-body">
+        <div class="term-line"><span class="prompt-line">guest@tejasu:~$</span> <span class="typed-cmd" id="cmd1"></span></div>
+        <div class="term-output" id="out1" style="display:none">
+          <p><span class="key">Name:</span>     <span class="val">Tejas Upadhyay</span></p>
+          <p><span class="key">Role:</span>     <span class="val">Developer & Cybersecurity Enthusiast</span></p>
+          <p><span class="key">Based:</span>    <span class="val">Florida, USA</span></p>
+          <p><span class="key">Status:</span>  <span class="val green-text">[ ONLINE ]</span></p>
+        </div>
+        <div class="term-line" id="line2" style="display:none"><span class="prompt-line">guest@tejasu:~$</span> <span class="typed-cmd" id="cmd2"></span></div>
+        <div class="term-output" id="out2" style="display:none">
+          <p><span class="val">4-year AFA CyberCamp attendee → 2026 Volunteer</span></p>
+          <p><span class="val">Builder of AI tools, websites, and games</span></p>
+          <p><span class="val">Photographer. Creator. Always learning.</span></p>
+        </div>
+        <div class="term-line" id="line3" style="display:none"><span class="prompt-line">guest@tejasu:~$</span> <span class="cursor-ready">█</span></div>
+      </div>
+    </div>
+    <div class="hero-actions" id="heroActions" style="opacity:0">
+      <a href="#projects" class="btn-primary" id="btn-view-work">View My Work</a>
+      <a href="#contact" class="btn-secondary" id="btn-contact">Get In Touch</a>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <span>scroll down</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" aria-labelledby="about-heading">
+    <div class="section-container">
+      <div class="section-label"><span class="prompt">$</span> cat about.txt</div>
+      <h2 id="about-heading">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Hey! I'm <strong>Tejas</strong> — a developer and cybersecurity enthusiast based in Florida. I've been building things on the web since I first got curious about how websites actually work, and I haven't stopped since.</p>
+          <p>I've been involved with <strong>AFA CyberCamp</strong> for four years, growing from a first-year student learning the basics to volunteering and helping the next generation of security-minded students.</p>
+          <p>When I'm not coding or thinking about cybersecurity, I'm out with a camera, building games in Godot, or exploring something completely new just to see if I can make it work.</p>
+          <div class="about-stats">
+            <div class="stat" id="stat-1">
+              <span class="stat-num">4</span>
+              <span class="stat-label">Years at AFA CyberCamp</span>
+            </div>
+            <div class="stat" id="stat-2">
+              <span class="stat-num">13+</span>
+              <span class="stat-label">GitHub Projects</span>
+            </div>
+            <div class="stat" id="stat-3">
+              <span class="stat-num">∞</span>
+              <span class="stat-label">Curiosity</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-terminal">
+          <div class="mini-terminal">
+            <div class="mini-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <div class="mini-body">
+              <p><span class="k">const</span> tejas = {</p>
+              <p class="ind">  <span class="k">languages:</span> [<span class="s">"Go"</span>, <span class="s">"JS"</span>, <span class="s">"HTML/CSS"</span>, <span class="s">"GDScript"</span>],</p>
+              <p class="ind">  <span class="k">interests:</span> [<span class="s">"Cybersecurity"</span>, <span class="s">"Web Dev"</span>, <span class="s">"Photography"</span>],</p>
+              <p class="ind">  <span class="k">currentFocus:</span> <span class="s">"Getting deeper into security"</span>,</p>
+              <p class="ind">  <span class="k">volunteering:</span> <span class="s">"AFA CyberCamp 2026"</span>,</p>
+              <p class="ind">  <span class="k">funFact:</span> <span class="s">"Built an AI antivirus in Go"</span></p>
+              <p>};</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" aria-labelledby="skills-heading">
+    <div class="section-container">
+      <div class="section-label"><span class="prompt">$</span> ls skills/</div>
+      <h2 id="skills-heading">Skills & Tools</h2>
+      <div class="skills-grid">
+        <div class="skill-card" id="sk-1">
+          <div class="skill-icon">⚡</div>
+          <h3>Development</h3>
+          <div class="skill-tags">
+            <span>HTML/CSS</span><span>JavaScript</span><span>TypeScript</span><span>Go</span><span>GDScript</span>
+          </div>
+        </div>
+        <div class="skill-card" id="sk-2">
+          <div class="skill-icon">🔐</div>
+          <h3>Cybersecurity</h3>
+          <div class="skill-tags">
+            <span>Networking</span><span>Linux</span><span>OSINT</span><span>Windows Hardening</span><span>Cisco CLI</span>
+          </div>
+        </div>
+        <div class="skill-card" id="sk-3">
+          <div class="skill-icon">🛠️</div>
+          <h3>Tools & Platforms</h3>
+          <div class="skill-tags">
+            <span>Git/GitHub</span><span>Vercel</span><span>Godot</span><span>Kali Linux</span><span>VS Code</span>
+          </div>
+        </div>
+        <div class="skill-card" id="sk-4">
+          <div class="skill-icon">📷</div>
+          <h3>Creative</h3>
+          <div class="skill-tags">
+            <span>Photography</span><span>Web Design</span><span>Game Dev</span><span>UI/UX</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" aria-labelledby="exp-heading">
+    <div class="section-container">
+      <div class="section-label"><span class="prompt">$</span> cat experience.log</div>
+      <h2 id="exp-heading">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item" id="exp-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <span class="timeline-date">June 2026</span>
+              <span class="timeline-badge active">Upcoming</span>
+            </div>
+            <h3>Volunteer Mentor</h3>
+            <p class="timeline-org">AFA CyberCamp 2026</p>
+            <p>Returning as a volunteer to mentor the next cohort of students through Standard and Advanced camp curriculum — covering Linux, Windows, Cisco, and cybersecurity fundamentals.</p>
+            <div class="timeline-tags"><span>Mentorship</span><span>Cybersecurity</span><span>Linux</span><span>Cisco</span></div>
+          </div>
+        </div>
+        <div class="timeline-item" id="exp-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <span class="timeline-date">2023 – 2025</span>
+            </div>
+            <h3>Student Participant</h3>
+            <p class="timeline-org">AFA CyberCamp</p>
+            <p>Attended 3 consecutive years, progressing from Standard Camp to Advanced Camp. Covered networking, OS hardening, OSINT, ethical hacking concepts, and Cisco CLI configuration.</p>
+            <div class="timeline-tags"><span>Networking</span><span>OSINT</span><span>Windows/Linux</span><span>4 Years</span></div>
+          </div>
+        </div>
+        <div class="timeline-item" id="exp-3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <span class="timeline-date">Ongoing</span>
+            </div>
+            <h3>Freelance Web Developer</h3>
+            <p class="timeline-org">Independent</p>
+            <p>Designed and built production websites including a business site for <a href="https://artificiumswfl.vercel.app" target="_blank" rel="noopener">Artificium</a> and various personal projects deployed on Vercel and GitHub Pages.</p>
+            <div class="timeline-tags"><span>HTML/CSS</span><span>JavaScript</span><span>Vercel</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" aria-labelledby="proj-heading">
+    <div class="section-container">
+      <div class="section-label"><span class="prompt">$</span> ls -la projects/</div>
+      <h2 id="proj-heading">Projects</h2>
+      <div class="projects-grid">
+
+        <article class="project-card featured" id="proj-1">
+          <div class="project-header">
+            <span class="project-lang go">Go</span>
+            <div class="project-links">
+              <a href="https://github.com/Tejas-Upadhyay/Ai-Antivirus" target="_blank" rel="noopener" aria-label="GitHub repo for Ai-Antivirus">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>AI Antivirus</h3>
+          <p>A security tool written in Go that uses AI-based analysis to detect potentially malicious files. Digs into the intersection of machine learning and endpoint security.</p>
+          <div class="project-footer">
+            <div class="proj-tags"><span>Go</span><span>Security</span><span>AI</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" id="proj-2">
+          <div class="project-header">
+            <span class="project-lang html">HTML</span>
+            <div class="project-links">
+              <a href="https://github.com/Tejas-Upadhyay/NextCore" target="_blank" rel="noopener" aria-label="GitHub repo for NextCore">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              </a>
+              <a href="https://next-core-rosy.vercel.app" target="_blank" rel="noopener" aria-label="Live demo of NextCore">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3v2H5v14h14v-9h2v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1h10zm7-1v6h-2V5.413l-7.793 7.794-1.414-1.414L19.585 4H16V2h5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>NextCore</h3>
+          <p>A clean, modern web application with a live deployment. Built with a focus on sharp UI and smooth user experience.</p>
+          <div class="project-footer">
+            <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" id="proj-3">
+          <div class="project-header">
+            <span class="project-lang html">HTML</span>
+            <div class="project-links">
+              <a href="https://github.com/Tejas-Upadhyay/artificiumWebsite" target="_blank" rel="noopener" aria-label="GitHub repo for Artificium">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              </a>
+              <a href="https://artificiumswfl.vercel.app" target="_blank" rel="noopener" aria-label="Live demo of Artificium site">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3v2H5v14h14v-9h2v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1h10zm7-1v6h-2V5.413l-7.793 7.794-1.414-1.414L19.585 4H16V2h5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>Artificium Website</h3>
+          <p>Professional business website built and deployed for Artificium SWFL. A real client-facing production site with live deployment on Vercel.</p>
+          <div class="project-footer">
+            <div class="proj-tags"><span>HTML</span><span>CSS</span><span>Client Work</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" id="proj-4">
+          <div class="project-header">
+            <span class="project-lang gdscript">GDScript</span>
+            <div class="project-links">
+              <a href="https://github.com/Tejas-Upadhyay/Neon-Bloom" target="_blank" rel="noopener" aria-label="GitHub repo for Neon Bloom">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>Neon-Bloom</h3>
+          <p>A game built in Godot for the Hack Club Milky Way jam. Combines neon visuals with engaging mechanics — first starred repository!</p>
+          <div class="project-footer">
+            <div class="proj-tags"><span>Godot</span><span>GDScript</span><span>Game Jam</span></div>
+            <span class="star-count">⭐ 1</span>
+          </div>
+        </article>
+
+        <article class="project-card" id="proj-5">
+          <div class="project-header">
+            <span class="project-lang html">HTML</span>
+            <div class="project-links">
+              <a href="https://github.com/Tejas-Upadhyay/Photography" target="_blank" rel="noopener" aria-label="GitHub repo for Photography site">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              </a>
+              <a href="https://tejas-upadhyay.github.io/Photography/" target="_blank" rel="noopener" aria-label="Live photography site">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3v2H5v14h14v-9h2v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1h10zm7-1v6h-2V5.413l-7.793 7.794-1.414-1.414L19.585 4H16V2h5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>Photography Portfolio</h3>
+          <p>A dedicated photography showcase site hosted on GitHub Pages, featuring original photography work with a clean gallery presentation.</p>
+          <div class="project-footer">
+            <div class="proj-tags"><span>HTML/CSS</span><span>Photography</span><span>GitHub Pages</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" id="proj-6">
+          <div class="project-header">
+            <span class="project-lang html">HTML</span>
+            <div class="project-links">
+              <a href="https://github.com/Tejas-Upadhyay/WildCast" target="_blank" rel="noopener" aria-label="GitHub repo for WildCast">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              </a>
+              <a href="https://wild-cast.vercel.app" target="_blank" rel="noopener" aria-label="Live WildCast site">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3v2H5v14h14v-9h2v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1h10zm7-1v6h-2V5.413l-7.793 7.794-1.414-1.414L19.585 4H16V2h5z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>WildCast</h3>
+          <p>A web project with a live Vercel deployment. Combining clean design with functional web development for a smooth user experience.</p>
+          <div class="project-footer">
+            <div class="proj-tags"><span>HTML</span><span>CSS</span><span>Vercel</span></div>
+          </div>
+        </article>
+
+      </div>
+      <div class="projects-cta">
+        <a href="https://github.com/Tejas-Upadhyay" target="_blank" rel="noopener" class="btn-secondary" id="btn-github">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;vertical-align:middle;margin-right:8px"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          See All 13 Repos on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="section-container">
+      <div class="section-label"><span class="prompt">$</span> ping tejasu.dpdns.org</div>
+      <h2 id="contact-heading">Get In Touch</h2>
+      <div class="contact-grid">
+        <div class="contact-text">
+          <p>I'm always open to chatting about cybersecurity, collaborating on projects, or connecting with people who build interesting things.</p>
+          <p>Whether you're a recruiter, a fellow developer, or just curious — feel free to reach out.</p>
+          <div class="contact-links">
+            <a href="https://github.com/Tejas-Upadhyay" target="_blank" rel="noopener" class="contact-link" id="link-github">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              <span>github.com/Tejas-Upadhyay</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-terminal">
+          <div class="mini-terminal">
+            <div class="mini-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <div class="mini-body">
+              <p><span class="green-text">PING</span> tejasu.dpdns.org</p>
+              <p class="dim">64 bytes from tejasu: icmp_seq=1 ttl=64 time=<span class="green-text">1ms</span></p>
+              <p class="dim">64 bytes from tejasu: icmp_seq=2 ttl=64 time=<span class="green-text">1ms</span></p>
+              <p class="dim">64 bytes from tejasu: icmp_seq=3 ttl=64 time=<span class="green-text">1ms</span></p>
+              <br>
+              <p>--- tejasu.dpdns.org ping statistics ---</p>
+              <p><span class="green-text">3 packets transmitted, 3 received, 0% packet loss</span></p>
+              <br>
+              <p><span class="green-text">▶</span> Connection established. Say hello!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-code"><span class="prompt">~/tejasu</span> — Built with HTML, CSS & JS</span>
+      <span class="footer-copy">© 2026 Tejas Upadhyay</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
