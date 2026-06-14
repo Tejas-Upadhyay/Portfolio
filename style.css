@@ -1,23 +1,23 @@
 /* =============================================
    TEJAS UPADHYAY — PORTFOLIO
-   Dark Terminal Aesthetic
+   Claude UI Aesthetic
    ============================================= */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --green:      #00ff41;
-  --green-dim:  #00c030;
-  --green-glow: rgba(0, 255, 65, 0.15);
-  --bg:         #0a0a0a;
-  --bg2:        #0f0f0f;
-  --bg3:        #141414;
-  --card:       #111111;
-  --border:     rgba(0, 255, 65, 0.12);
-  --border-h:   rgba(0, 255, 65, 0.4);
-  --text:       #c0c0c0;
-  --text-dim:   #555;
-  --text-bright:#e0e0e0;
+  --green:      #d97757;
+  --green-dim:  #b56247;
+  --green-glow: rgba(217, 119, 87, 0.15);
+  --bg:         #faf8f5;
+  --bg2:        #f0ece6;
+  --bg3:        #e6e0d8;
+  --card:       #ffffff;
+  --border:     rgba(0, 0, 0, 0.08);
+  --border-h:   rgba(217, 119, 87, 0.4);
+  --text:       #333333;
+  --text-dim:   #777777;
+  --text-bright:#111111;
   --font-mono:  'JetBrains Mono', monospace;
   --font-sans:  'Inter', sans-serif;
   --radius:     6px;
@@ -66,7 +66,7 @@ body {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: rgba(10,10,10,0.92);
+  background: rgba(250,248,245,0.92);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -164,12 +164,12 @@ body {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 10px;
-  box-shadow: 0 0 60px rgba(0,255,65,0.07), 0 2px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 0 60px rgba(217,119,87,0.07), 0 2px 40px rgba(0,0,0,0.1);
   overflow: hidden;
 }
 
 .terminal-bar {
-  background: #1a1a1a;
+  background: #e6e0d8;
   padding: 10px 16px;
   display: flex;
   align-items: center;
@@ -255,9 +255,9 @@ body {
 }
 
 .btn-primary:hover {
-  background: #00ff60;
+  background: #c26343;
   transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(0,255,65,0.4);
+  box-shadow: 0 0 20px rgba(217,119,87,0.4);
 }
 
 .btn-secondary {
@@ -279,7 +279,7 @@ body {
 
 .btn-secondary:hover {
   background: var(--green-glow);
-  box-shadow: 0 0 20px rgba(0,255,65,0.2);
+  box-shadow: 0 0 20px rgba(217,119,87,0.2);
   transform: translateY(-2px);
 }
 
@@ -404,11 +404,11 @@ h2::before {
   border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 0 30px rgba(0,255,65,0.05);
+  box-shadow: 0 0 30px rgba(217,119,87,0.05);
 }
 
 .mini-bar {
-  background: #1a1a1a;
+  background: #e6e0d8;
   padding: 8px 12px;
   display: flex;
   gap: 6px;
@@ -449,7 +449,7 @@ h2::before {
 .skill-card:hover {
   border-color: var(--border-h);
   transform: translateY(-4px);
-  box-shadow: 0 8px 40px rgba(0,255,65,0.08);
+  box-shadow: 0 8px 40px rgba(217,119,87,0.08);
 }
 
 .skill-icon {
@@ -482,7 +482,7 @@ h2::before {
 }
 
 .skill-card:hover .skill-tags span {
-  border-color: rgba(0,255,65,0.2);
+  border-color: rgba(217,119,87,0.2);
   color: var(--text);
 }
 
@@ -517,7 +517,7 @@ h2::before {
   border-radius: 50%;
   background: var(--bg);
   border: 2px solid var(--green);
-  box-shadow: 0 0 10px rgba(0,255,65,0.4);
+  box-shadow: 0 0 10px rgba(217,119,87,0.4);
   transition: transform var(--transition);
 }
 
@@ -566,7 +566,7 @@ h2::before {
 
 @keyframes pulse-badge {
   0%, 100% { box-shadow: none; }
-  50% { box-shadow: 0 0 8px rgba(0,255,65,0.3); }
+  50% { box-shadow: 0 0 8px rgba(217,119,87,0.3); }
 }
 
 .timeline-content h3 {
@@ -626,16 +626,16 @@ h2::before {
 .project-card:hover {
   transform: translateY(-5px);
   border-color: var(--border-h);
-  box-shadow: 0 12px 40px rgba(0,255,65,0.08);
+  box-shadow: 0 12px 40px rgba(217,119,87,0.08);
 }
 
 .project-card.featured {
-  border-color: rgba(0,255,65,0.25);
-  background: linear-gradient(135deg, #111 0%, #0e1a10 100%);
+  border-color: rgba(217,119,87,0.25);
+  background: linear-gradient(135deg, #ffffff 0%, #f0ece6 100%);
 }
 
 .project-card.featured:hover {
-  box-shadow: 0 12px 50px rgba(0,255,65,0.14);
+  box-shadow: 0 12px 50px rgba(217,119,87,0.14);
 }
 
 .project-header {
@@ -830,7 +830,7 @@ footer {
     display: flex;
     position: absolute;
     top: 60px; left: 0; right: 0;
-    background: rgba(10,10,10,0.97);
+    background: rgba(250,248,245,0.97);
     border-bottom: 1px solid var(--border);
     padding: 1rem 2rem;
     gap: 1rem;
